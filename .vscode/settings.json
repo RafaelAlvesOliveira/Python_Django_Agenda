@@ -4,8 +4,9 @@
   "editor.hover.enabled": true,
   "workbench.startupEditor": "none",
   "explorer.compactFolders": false,
-  "terminal.integrated.fontSize": 14,
-  "editor.rulers": [80, 120],
+  "terminal.integrated.fontSize": 14
+,
+  // "editor.rulers": [80, 120],
   "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
   "workbench.iconTheme": "material-icon-theme",
   "code-runner.executorMap": {
@@ -13,8 +14,8 @@
   },
   "code-runner.runInTerminal": true,
   "code-runner.ignoreSelection": true,
-  "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
-  "terminal.integrated.fontFamily": "",
+  "editor.fontFamily": " JetBrains Mono,  'Cascadia Code', 'Consolas', 'Ubuntu Mono', 'Courier New',",
+  "terminal.integrated.fontFamily": "Source Code Pro, 'Courier New', monospace",
   "editor.fontLigatures": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
@@ -22,9 +23,9 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.fixAll.unusedImports": true,
-      "source.organizeImports": true
+      "source.fixAll": "explicit",
+      "source.fixAll.unusedImports": "explicit",
+      "source.organizeImports": "explicit"
     }
   },
   "python.languageServer": "Pylance",
@@ -47,7 +48,7 @@
     "reportUnknownLambdaType": "none",
     "reportUnknownParameterType": "none"
   },
-  "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.defaultInterpreterPath": "./.venv/bin/python",
   "python.analysis.typeCheckingMode": "basic",
   "cSpell.enabled": true,
   "python.formatting.provider": "none"
