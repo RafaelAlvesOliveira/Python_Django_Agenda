@@ -9,6 +9,7 @@ db.sqlite3-diário
 static_files
 .venv
 .vscode
+.gitignore
 
 # Se o seu processo de construção inclui a execução de collectstatic, então você provavelmente não precisa ou deseja incluir staticfiles/
 # no seu repositório Git. Atualize e descomente a linha a seguir conforme necessário.
