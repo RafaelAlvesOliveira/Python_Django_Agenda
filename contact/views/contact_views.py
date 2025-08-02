@@ -1,9 +1,16 @@
-from django.shortcuts import render
+from django.http import Http404
+from django.shortcuts import get_object_or_404, render
+
 from contact.models import Contact
 
 
 def index(request):
-    contacts = Contact.objects.all()
+    contacts = Contact.objects \
+        .filter(show=True)\
+        .order_by('id')[:10]
+
+    # print(contacts.query)
+    # Mostra as consultas SQL realizadas na tabela.
 
     context = {
         'contacts': contacts,
@@ -12,5 +19,26 @@ def index(request):
     return render(
         request,
         'contact/index.html',
+        context
+    )
+
+
+def contact(request, contact_id):
+    # single_contact = Contact.objects.filter(pk=contact_id).first()
+    single_contact = get_object_or_404(
+        Contact.objects.filter(pk=contact_id),
+        show=True,
+    )
+
+    # if single_contact is None:
+    #     raise Http404()
+
+    context = {
+        'contact': single_contact,
+    }
+
+    return render(
+        request,
+        'contact/contact.html',
         context
     )
