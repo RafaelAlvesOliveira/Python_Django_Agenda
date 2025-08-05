@@ -17,6 +17,7 @@
   "editor.fontFamily": " JetBrains Mono,  'Cascadia Code', 'Consolas', 'Ubuntu Mono', 'Courier New',",
   "terminal.integrated.fontFamily": "Source Code Pro, 'Courier New', monospace",
   "editor.fontLigatures": false,
+  "python.testing.pytestArgs": [],
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.tabSize": 4,
@@ -28,6 +29,61 @@
       "source.organizeImports": "explicit"
     }
   },
+   "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "[django-html]": {
+    "editor.formatOnSave": false,
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+    "files.autoSave": "onFocusChange",
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "files.associations": {
+    "*.js": "javascript",
+    "*.jsx": "javascriptreact",
+    "*.xml": "html",
+    "*.svg": "html",
+    "*.html": "html",
+    "django-html": "html", // batisteo.vscode-django
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/base_templates/**/*.html": "django-html",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html", // batisteo.vscode-django
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "html": "html",
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "chat.commandCenter.enabled": false,
+  "window.commandCenter": false,
+  "editor.minimap.enabled": false,
+  "vscode-edge-devtools.webhint": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "ms-settings"
+  ],
   "python.languageServer": "Pylance",
   "python.formatting.autopep8Args": [
     "--indent-size=4",
