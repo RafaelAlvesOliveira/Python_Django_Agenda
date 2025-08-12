@@ -25,7 +25,8 @@ class Category(models.Model):
 class Contact(models.Model):
     first_name: models.CharField = models.CharField(max_length=50)
     last_name: models.CharField = models.CharField(max_length=50, blank=True)
-    phone: models.CharField = models.CharField(max_length=50)
+    phone: models.CharField = models.CharField(
+        max_length=50, verbose_name='Telefone')
     email: models.EmailField = models.EmailField(max_length=254, blank=True)
     created_date: models.DateTimeField = models.DateTimeField(
         default=timezone.now)
